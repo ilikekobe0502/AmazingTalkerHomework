@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AmazingTalkerHomework</string>
+
+    <!--  Main Page  -->
+    <string name="main_title_date">%s ~ %s</string>
+    <string name="main_teacher">Teacher: %s</string>
+</resources>
