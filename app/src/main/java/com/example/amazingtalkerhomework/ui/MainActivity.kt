@@ -88,16 +88,18 @@ class MainActivity : FragmentActivity() {
     private fun setTitleUI() {
         binding.apply {
             ivPrevious.setOnClickListener {
-                if (dateOffset != 0) {
+                if (dateOffset != 0 && !binding.pbLoading.isVisible) {
                     dateOffset -= 7
                     getData()
                     updateTitle()
                 }
             }
             ivForward.setOnClickListener {
-                dateOffset += 7
-                getData()
-                updateTitle()
+                if (!binding.pbLoading.isVisible) {
+                    dateOffset += 7
+                    getData()
+                    updateTitle()
+                }
             }
 
             updateTitle()
